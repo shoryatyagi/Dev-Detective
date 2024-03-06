@@ -247,12 +247,17 @@ main {
   color: var(--lm-text);
 }
 
-.profileInfo{
+.profileInfo {
   width: 50%;
-  display:flex;
+  display: flex;
   gap: 14px;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 3px;
 }
 
 .bottomIcon{
