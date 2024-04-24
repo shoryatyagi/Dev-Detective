@@ -73,11 +73,11 @@ function updateProfile(data) {
         profileBio.innerText = (data?.bio === null) ? "This Profile has no Bio" : data?.bio;;
 
         repos.innerText = data?.public_repos;
-        repos.href = data?.repos_url;
+        repos.href = checkNull(data?.followers, followers) ?  `https://github.com/${data?.login}?tab=repositories` : "#";;
         followers.innerText = data?.followers;
-        followers.href = data?.followers_url;
+        followers.href = checkNull(data?.followers, followers) ?  `https://github.com/${data?.login}?tab=followers` : "#";
         following.innerText = data?.following;
-        following.href = data?.following_url;
+        following.href = checkNull(data?.following, following) ?  `https://github.com/${data?.login}?tab=following` : "#";
 
         location.innerText = checkNull(data?.location, location) ? data?.location : "Not Available";
 
